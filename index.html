@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>360 Video VR Example</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
-      <!-- 360-degree video element -->
-      <a-assets>
-        <video id="video" src="test.mp4" autoplay loop="true"></video>
-      </a-assets>
-      
-      <a-sky src="#video"></a-sky>
-    </a-scene>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360 Video Player with A-Frame</title>
+  <link rel="stylesheet" href="style.css" class="css">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <!-- A-Frame scene to hold the 360 video -->
+  <a-scene>
+    <!-- 360 video sphere -->
+    <a-assets>
+      <!-- Load the video as an asset -->
+      <video id="video" src="test.mp4" autoplay="true" loop="true" crossOrigin="anonymous"></video>
+    </a-assets>
+
+    <!-- 360 video sphere -->
+    <a-sky src="#video" rotation="0 -90 0"></a-sky>
+
+    <!-- VR Mode and Camera -->
+    <a-camera>
+      <!-- The camera can look around and move freely -->
+    </a-camera>
+    
+    <!-- Optional: Add VR support (optional) -->
+    <a-entity position="0 1.6 0" camera look-controls>
+      <!-- This allows for VR headset compatibility -->
+    </a-entity>
+
+    <!-- Optional: Controls for user interaction -->
+    <a-entity position="0 1.6 3" rotation="0 0 0" cursor="fuse: true; maxDistance: 10; color: black;">
+      <a-ring color="black" radius-inner="0.03" radius-outer="0.05" position="0 0 -2"></a-ring>
+    </a-entity>
+  </a-scene>
+</body>
 </html>
