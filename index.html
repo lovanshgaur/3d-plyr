@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>360 Video Player with A-Frame</title>
-  <link rel="stylesheet" href="style.css" class="css">
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
@@ -13,7 +12,7 @@
     <!-- 360 video sphere -->
     <a-assets>
       <!-- Load the video as an asset -->
-      <video id="video" src="test.mp4" autoplay="true" loop="true" crossOrigin="anonymous"></video>
+      <video id="video" src="path/to/your/video.mp4" autoplay="true" loop="true" muted playsinline crossOrigin="anonymous"></video>
     </a-assets>
 
     <!-- 360 video sphere -->
@@ -23,7 +22,7 @@
     <a-camera>
       <!-- The camera can look around and move freely -->
     </a-camera>
-    
+
     <!-- Optional: Add VR support (optional) -->
     <a-entity position="0 1.6 0" camera look-controls>
       <!-- This allows for VR headset compatibility -->
