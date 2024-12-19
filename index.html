@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>360 Video VR Player</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #vrButton {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="vrButton">Enter VR</button>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webxr-input-profiles/motion-controllers/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@webxr-polyfill/webxr-polyfill.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webxr-api.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
